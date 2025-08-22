@@ -1,0 +1,61 @@
+/* Fondo general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa; /* gris clarito */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    gap: 20px;
+}
+
+/* Título principal */
+h1 {
+    color: #3b3b3b;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Mensaje general */
+h3 {
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Estilos según resultado */
+.positivo {
+    background: #d4f8d4;  /* verde clarito */
+    color: #2b7a2b;
+}
+
+.negativo {
+    background: #f8d4d4;  /* rojo clarito */
+    color: #a12b2b;
+}
+
+.cero {
+    background: #fef3c7;  /* amarillo clarito */
+    color: #92400e;
+}
+
+/* Enlace de volver */
+a {
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #a6dcef;  /* celeste */
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+a:hover {
+    background: greenyellow; /* celeste un poco más fuerte */
+}
