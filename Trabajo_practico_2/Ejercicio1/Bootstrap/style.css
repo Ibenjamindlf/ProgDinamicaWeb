@@ -1,0 +1,90 @@
+/* Fondo general */
+body {
+    background: black; /* gris muy claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ecf0f1;
+    padding: 40px;
+}
+.caja-nombre{
+    background-color: #28a745;
+    margin: 3px;
+}
+/* Contenedor */
+.contenedor-form {
+    max-width: 900px;
+    margin: auto;
+    background: black;
+    padding: 30px;
+    border-radius: 15px;
+    /* border: 2px solid red; */
+    box-shadow: 0 0 20px 4px #9b59b6;
+}
+
+/* Título */
+h1 {
+    color: #9b59b6;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+    font-weight: 500;
+    color: white;
+}
+
+/* Inputs */
+.form-control, .form-select {
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #111;
+  color: #ecf0f1;
+  transition: 0.5s;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #9b59b6;
+  box-shadow: 0 0 10px #9b59b6;
+}
+
+/* Mensajes de validación */
+.valid-feedback {
+    color: #28a745;
+    font-size: 0.9rem;
+}
+.invalid-feedback {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+/* Checkbox */
+.form-check-input:checked {
+    background-color: #9b59b6;
+    border-color: #9b59b6;
+}
+.form-check-label {
+    color: white;
+}
+
+/* Botón */
+.btn-primary {
+    background-color: #9b59b6;   /* Violeta base */
+    color: #fff;                /* Texto blanco */
+    border: 2px solid #9b59b6;  /* Borde violeta */
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Hover → invertimos colores */
+.btn-primary:hover {
+    background-color: #000;     /* Fondo negro */
+    color: #9b59b6;             /* Texto violeta */
+    border: 2px solid #9b59b6;  /* Borde violeta brillante */
+    box-shadow: 0 0 10px #9b59b6; /* Glow */
+}
+
+
