@@ -6,55 +6,60 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        // Lista de usuarios registrados
-        $usuario1 = [
-            "usuario" => "benjamin",
-            "clave"   => "12345"
-        ];
-        $usuario2 = [
-            "usuario" => "maria",
-            "clave"   => "abcde"
-        ];
-        $usuario3 = [
-            "usuario" => "juan",
-            "clave"   => "qwerty"
-        ];
+    <div class="contenedor-mensaje">
+        <?php
+            // Lista de usuarios registrados
+            $usuario1 = [
+                "usuario" => "benjamin",
+                "clave"   => "12345"
+            ];
+            $usuario2 = [
+                "usuario" => "maria",
+                "clave"   => "abcde"
+            ];
+            $usuario3 = [
+                "usuario" => "juan",
+                "clave"   => "qwerty"
+            ];
 
-        $todosLosUsuarios = [$usuario1, $usuario2, $usuario3];
+            $todosLosUsuarios = [$usuario1, $usuario2, $usuario3];
 
-        // Verificar si se recibieron datos por POST
-        if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
+            // Verificar si se recibieron datos por POST
+            if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
 
-            $user     = $_POST['usuario'];
-            $password = $_POST['password'];
+                $user     = $_POST['usuario'];
+                $password = $_POST['password'];
 
-            $cantUsuarios = count($todosLosUsuarios);
-            $bandera = false;
-            $cadena = '';
+                $cantUsuarios = count($todosLosUsuarios);
+                $bandera = false;
+                $cadena = '';
 
-            $i = 0;
-            while ($i < $cantUsuarios && !$bandera) {
-                $unUsuario = $todosLosUsuarios[$i];
-                $usuarioUnUsuario = $unUsuario['usuario'];
-                $passUnUsuario    = $unUsuario['clave'];
+                $i = 0;
+                while ($i < $cantUsuarios && !$bandera) {
+                    $unUsuario = $todosLosUsuarios[$i];
+                    $usuarioUnUsuario = $unUsuario['usuario'];
+                    $passUnUsuario    = $unUsuario['clave'];
 
-                if ($user === $usuarioUnUsuario && $password === $passUnUsuario) {
-                    $cadena = "<div class='feedback-valid'><p>Bienvenido $usuarioUnUsuario</p></div>";
-                    $bandera = true;
+                    if ($user === $usuarioUnUsuario && $password === $passUnUsuario) {
+                        $cadena = "<div class='feedback-valid'><p>Bienvenido $usuarioUnUsuario</p></div>";
+                        $bandera = true;
+                    }
+                    $i++;
                 }
-                $i++;
+
+                if (!$bandera) {
+                    $cadena = "<div class='feedback-error'><p>Error: usuario o clave incorrectos</p></div>";
+                }
+
+                echo $cadena;
+
+            } else {
+                echo '<div class="feedback-error"><p>No se recibieron datos</p></div>';
             }
-
-            if (!$bandera) {
-                $cadena = "<div class='feedback-error'><p>Error: usuario o clave incorrectos</p></div>";
-            }
-
-            echo $cadena;
-
-        } else {
-            echo '<div class="feedback-error"><p>No se recibieron datos</p></div>';
-        }
-    ?>
+        ?>
+        <div class="volverAlogin">
+            <a href="inicio.php">Volver al formulario</a>
+        </div>
+    </div>
 </body>
 </html>
