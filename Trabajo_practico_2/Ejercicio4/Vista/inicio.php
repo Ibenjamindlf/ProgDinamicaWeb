@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio4.2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="container mt-5">
@@ -73,6 +74,8 @@
                             <option value="comedia">Comedia</option>
                             <option value="terror">Terror</option>
                         </select>
+                        <div class="invalid-feedback" id="generoError"></div>
+                        <div class="valid-feedback" id="generoValido"></div>
                     </div>
                 </div>
 
@@ -80,9 +83,8 @@
                     <div class="col-md-6">
                         <label for="validacionDuracion" class="form-label">Duración (minutos)</label>
                         <input type="number" id="validacionDuracion" name="duracion" class="form-control" required>
-                        <div class="invalid-feedback" id="duracionError">
-                            
-                        </div>
+                        <div class="invalid-feedback" id="duraccionError"></div>
+                        <div class="valid-feedback" id="duraccionValido"></div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Restricción Edad</label>
@@ -97,6 +99,8 @@
                         <div class="form-check">
                             <input type="radio" name="restriccionEdad" id="mayores18" value="18" class="form-check-input">
                             <label for="mayores18" class="form-check-label">Mayores 18 años</label>
+                            <div class="invalid-feedback" id="restriccionEdadError"></div>
+                            <div class="valid-feedback" id="restriccionEdadValido"></div>
                         </div>
                     </div>
                 </div>
@@ -104,6 +108,8 @@
                 <div class="mb-3">
                     <label for="sinopsis" class="form-label"><b>Sinopsis</b></label>
                     <textarea id="sinopsis" name="sinopsis" rows="4" class="form-control"></textarea>
+                    <div class="invalid-feedback" id="sinopsisError"></div>
+                    <div class="valid-feedback" id="sinopsisValido"></div>
                 </div>
 
                 <div class="d-flex gap-2">
