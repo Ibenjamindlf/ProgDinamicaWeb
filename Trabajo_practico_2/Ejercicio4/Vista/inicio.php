@@ -10,7 +10,7 @@
 <body>
     <main class="container mt-5">
         <section class="card shadow p-4">
-            <form class="needs-validation" novalidate action="procesar.php" id="loginForm">
+            <form class="needs-validation" novalidate action="procesar.php" id="loginForm" method="post">
                 <h2 class="mb-4 text-primary">🎬 Cinem@s</h2>
 
                 <div class="row mb-3">
@@ -89,15 +89,15 @@
                     <div class="col-md-6">
                         <label class="form-label">Restricción Edad</label>
                         <div class="form-check">
-                            <input type="radio" name="restriccionEdad" id="publico" value="todos" class="form-check-input" required>
+                            <input type="radio" name="restriccionEdad" id="publico" value="Apto para todo publico" class="form-check-input" required>
                             <label for="publico" class="form-check-label">Todos los públicos</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" name="restriccionEdad" id="mayores7" value="7" class="form-check-input">
+                            <input type="radio" name="restriccionEdad" id="mayores7" value="Mayores de 7 años" class="form-check-input">
                             <label for="mayores7" class="form-check-label">Mayores 7 años</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" name="restriccionEdad" id="mayores18" value="18" class="form-check-input">
+                            <input type="radio" name="restriccionEdad" id="mayores18" value="Mayores de 18 años" class="form-check-input">
                             <label for="mayores18" class="form-check-label">Mayores 18 años</label>
                             <div class="invalid-feedback" id="restriccionEdadError"></div>
                             <div class="valid-feedback" id="restriccionEdadValido"></div>
@@ -111,7 +111,7 @@
                     <div class="invalid-feedback" id="sinopsisError"></div>
                     <div class="valid-feedback" id="sinopsisValido"></div>
                 </div>
-
+                
                 <div class="d-flex gap-2">
                     <button type="submit" class="btn btn-primary">Enviar</button>
                     <button type="reset" class="btn btn-secondary">Borrar</button>
@@ -119,7 +119,7 @@
             </form>
         </section>
     </main>
-    <script src="scriptValidacionForm.js"></script>
+    <!-- <script src="scriptValidacionForm.js"></script> -->
     <!-- <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> -->
 </body>
