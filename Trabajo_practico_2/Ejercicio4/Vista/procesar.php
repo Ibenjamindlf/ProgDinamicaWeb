@@ -1,5 +1,7 @@
 <?php 
     include_once '../Control/validador.php';
+    // Verifica si el formulario fue enviado mediante el método POST.
+    // Esto asegura que el siguiente bloque de código solo se ejecute cuando el usuario envía datos.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $validador = new Validador();
 
