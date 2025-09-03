@@ -1,0 +1,102 @@
+/* estilos.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilo del formulario */
+form {
+    background: rgba(20, 20, 30, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(6px);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00fff7;
+    letter-spacing: 1px;
+}
+
+/* Inputs y select */
+input[type="number"],
+select {
+    width: 80%;              /* más angosto que antes */
+    display: block;
+    margin: 0 auto 0px auto; /* centrados */
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #1e293b;
+    color: #f1f5f9;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+/* Hover / Focus */
+input[type="number"]:focus,
+select:focus {
+    background: #0f172a;
+    box-shadow: 0 0 8px #00fff7, 0 0 15px rgba(0,255,247,0.3);
+    border: 1px solid #00fff7;
+}
+
+/* Botón */
+input[type="submit"] {
+    width: 80%;              /* mismo ancho que inputs */
+    display: block;
+    margin: 0 auto;
+    padding: 12px;
+    background: linear-gradient(90deg, #00fff7, #3b82f6);
+    border: none;
+    border-radius: 10px;
+    color: #0f172a;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #3b82f6, #00fff7);
+    box-shadow: 0 0 12px #00fff7, 0 0 20px rgba(0,255,247,0.5);
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

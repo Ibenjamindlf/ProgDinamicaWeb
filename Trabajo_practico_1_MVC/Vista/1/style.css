@@ -1,0 +1,66 @@
+/* Fondo general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa; /* gris muy clarito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del formulario */
+form {
+    background: #ffffff; /* blanco */
+    padding: 50px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Label */
+form label,
+form span {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input de texto */
+input[type="text"] {
+    width: 98%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid #cfd9e6;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #8fbff8;
+    box-shadow: 0 0 6px rgba(143,191,248,0.5);
+}
+
+/* Botón */
+input[type="submit"] {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #a6dcef; /* celestito */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: greenyellow; /* celeste un poco más fuerte */
+}
+
+.h3{
+    margin: 10px;
+}
